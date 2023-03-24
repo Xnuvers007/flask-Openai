@@ -2,7 +2,17 @@ import openai
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
+app.static_folder = 'static'
+
+@app.route('/favicon.ico')
+def favicon():
+    return app.send_static_file('favicon.ico')
+
 openai.api_key = "YOUR-APIKEY-OPENAI"
+
+@app.route('/robots.txt')
+def robots():
+    return app.send_static_file('robots.txt')
 
 @app.route("/", methods=["GET", "POST"])
 def home():
