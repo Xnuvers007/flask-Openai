@@ -3,7 +3,6 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js">
     <meta charset="UTF-8">
     <meta name="description" content="AI Website (Xnuvers007)">
     <meta name="author" content="Xnuvers007">
@@ -150,20 +149,30 @@
         font-size: 20px;
         font-weight: 300;
         font-style: italic;
+        display: block;
+        margin: 0 auto;
+      }
+      strong {
+        display: block;
+        text-align: center;
+        margin-bottom: 1em;
       }
     </style>
   </head>
   <body>
     <h1>OpenAI Website by Xnuvers007</h1>
     <br />
+    <h2 style="text-align: center; color: green;">thanks to Allah and Muhammad</h2>
     <p style="text-align: center; color: green;">
-    thanks to Allah and Muhammad,
+    ,
     <button class="btn btn-primary"><a href="https://openai.com/" style="color: white;">ChatGPT Openai API</a></button>,
     <button class="btn btn-primary"><a href="https://github.com/Xnuvers007" style="color: white;">Xnuvers007</a></button>.
     ❤️
-    <button class="btn btn-primary"><a href="
+      <br />
+      <br />
+    <button class="btn btn-primary"><a href="https://github.com/Xnuvers007/flask-Openai" style="color: white;"> Source Code </a></button>
     </p>
-    <center> <div id="clock"></div> </center>
+    <div id="clock"></div>
 
     <script>
     function displayTime() {
@@ -175,39 +184,26 @@
     </script>
 
     <br />
+    <strong>
+      get used to using punctuation marks such as !,?, etc. ///// biasakan gunakan tanda baca seperti !,?,dll. <br /><br />
+      if you want to widen the input field, just drag or slide the end of the box on the right. ///// jika kalian ingin memperlebar kolom input, tinggal tarik atau geser saja bagian ujung kotak di sebelah kanan
+    </strong>
+    <br />
+
+
+<!--     <br />
     <center><strong>
         get used to using punctuation marks such as !,?, etc. ///// biasakan gunakan tanda baca seperti !,?,dll. <br /><br />
       if you want to widen the input field, just drag or slide the end of the box on the right. ///// jika kalian ingin memperlebar kolom input, tinggal tarik atau geser saja bagian ujung kotak di sebelah kanan
-    </strong></center> <br />
+    </strong></center> <br /> -->
 
     <form method="POST" onsubmit="showLoading()">
       <label for="input-text">Input Text:</label>
       <!-- <input type="text" id="input-text" name="input-text" oninput="addNewLine()"><br><br> -->
-      <textarea id="input-text" name="input-text" cols="auto" rows="auto" oninput="saveInput()"></textarea><br><br>
+      <textarea id="input-text" name="input-text" cols="auto" rows="auto" oninput="addNewline()"></textarea><br><br>
       <input type="submit" value="Submit">
     </form>
-    <br />
-    <p style="font-size: medium; color: green;"> Your Input: </p>
-    <pre id="output"></pre>
-
-    <script>
-  // Retrieve the input from localStorage (if available) and set it as the value of the input field
-  var input = localStorage.getItem('input');
-  if (input) {
-    document.getElementById('input-text').value = input;
-  }
-
-  function saveInput() {
-    // Save the input to localStorage
-    var input = document.getElementById('input-text').value;
-    localStorage.setItem('input', input);
-  }
-    // Display the user input
-    var output = document.getElementById('output');
-    output.innerHTML = input;
-
-    </script>
-    <br />
+    <br>
     <p style="color: green;">If you would like to contact me, please click the button below or give me apikey OpenAI:</p>
     <button class="btn btn-primary" id="contact-button">Contact me</button>
     <button class="btn btn-primary" onclick="myFunction()">Toggle dark mode</button>
@@ -229,7 +225,6 @@
         <i id="loading-icon" class="fa fa-spinner fa-pulse"></i>
         <span id="loading-text">Sedang Diproses</span>
     </div>
-    
     {% if output %}
     <div>
       <h3>Output:</h3>
@@ -255,7 +250,7 @@
         loading.style.display = "block";
       }
     </script>
-<!-- <script>
+<script>
     function addNewline() {
       var input = document.getElementById("input-text");
       var inputWidth = input.clientWidth;
@@ -294,7 +289,7 @@
       var metrics = context.measureText(text);
       return metrics.width;
     }
-  </script> -->
+  </script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" type="javascript"></script>
   </body>
